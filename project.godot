@@ -11,8 +11,32 @@ config_version=5
 [application]
 
 config/name="Part-Timers Co"
+config/tags=PackedStringArray("asignment")
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "yellow",
+"res://Export/": "purple",
+"res://Scenes/": "green",
+"res://addons/": "blue"
+}
 
 [rendering]
 
