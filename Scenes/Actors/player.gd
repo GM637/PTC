@@ -2,6 +2,7 @@ extends CharacterBody3D
 class_name Player
 
 @onready var sprite: AnimatedSprite3D = $Sprite
+@onready var pivot: SpringArm3D = $Pivot
 
 var SPEED = 3.0
 var JUMP_VELOCITY = 3.5
@@ -9,7 +10,15 @@ var JUMP_VELOCITY = 3.5
 var input_dir : Vector2
 var direction : Vector3
 
+var d : float = 0.06
+
+func _ready() -> void:
+	
+	pivot.top_level = true
+
 func _physics_process(delta: float) -> void:
+	
+	d = delta
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -32,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	cam()
 	anim()
 
 func anim() :
@@ -43,3 +53,7 @@ func anim() :
 		sprite.play("Idle" if !input_dir else "RunNorm")
 	else :
 		if sprite.animation != "Jump" : sprite.play("Jump")
+
+func cam() :
+	
+	pivot.global_position = lerp(pivot.global_position,global_position + Vector3(0.0,0.2,0.0) ,d * 10.0)
