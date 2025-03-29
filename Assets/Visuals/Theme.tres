@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dic3owbl0ypgf"]
+
+[ext_resource type="FontFile" uid="uid://cg7t2p8paoye1" path="res://Assets/Visuals/Miscs/Dimbo Regular.ttf" id="1_sr4np"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sr4np"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr4np"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.976471)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 10
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[resource]
+default_base_scale = 2.0
+default_font = ExtResource("1_sr4np")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.372549)
+Label/constants/line_spacing = -12
+Label/constants/outline_size = 24
+Label/constants/shadow_offset_x = 4
+Label/constants/shadow_offset_y = 4
+Label/constants/shadow_outline_size = 24
+Label/font_sizes/font_size = 32
+Label/styles/normal = SubResource("StyleBoxEmpty_sr4np")
+TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+TooltipLabel/constants/outline_size = 0
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/font_sizes/font_size = 28
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_sr4np")

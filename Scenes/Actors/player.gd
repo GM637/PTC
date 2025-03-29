@@ -4,16 +4,32 @@ class_name Player
 @onready var sprite: AnimatedSprite3D = $Sprite
 @onready var pivot: SpringArm3D = $Pivot
 
-var SPEED = 3.0
-var JUMP_VELOCITY = 3.5
+static var pts = 0
+static var money = 0
+static var hp = 10
+static var item
+static var task: Array[String]
 
-var input_dir : Vector2
-var direction : Vector3
+@export var starting_tasks: Array[String]
 
-var d : float = 0.06
+@onready var points_label: Label = $GUI/Control/Tasks/Points
+@onready var health_label: Label = $GUI/Control/Health
+@onready var item_label: Label = $GUI/Control/Health/Item
+@onready var tasks_label: Label = $GUI/Control/Tasks
+
+var SPEED = 1.5
+var JUMP_VELOCITY = 3.0
+
+var input_dir: Vector2
+var direction: Vector3
+var input_lock: bool = false
+var last_input: Vector2 = Vector2.UP
+
+var d: float = 0.06
 
 func _ready() -> void:
 	
+	task = starting_tasks
 	pivot.top_level = true
 
 func _physics_process(delta: float) -> void:
@@ -29,10 +45,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	# Get the input direction and handle the movement/deceleration.
-	input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") if !input_lock else input_dir
+	if input_dir : last_input = input_dir
 	direction = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:
+		
 		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 20.0)
 		velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 20.0)
 	else:
@@ -43,6 +61,7 @@ func _physics_process(delta: float) -> void:
 	
 	cam()
 	anim()
+	gui()
 
 func anim() :
 	
@@ -57,3 +76,21 @@ func anim() :
 func cam() :
 	
 	pivot.global_position = lerp(pivot.global_position,global_position + Vector3(0.0,0.2,0.0) ,d * 10.0)
+
+func gui() :
+	
+	hp_string()
+
+func hp_string() :
+	var t = "     "
+	
+	for i in hp :
+		var x = wrapi(i,0,5)
+		
+		match t[x] :
+			" " : t[x] = "W"
+			"W" : t[x] = "A"
+			"A" : t[x] = "3"
+			"3" : t[x] = "0"
+	
+	health_label.text = t
