@@ -8,9 +8,6 @@ static var pts = 0
 static var money = 0
 static var hp = 10
 static var item
-static var task: Array[String]
-
-@export var starting_tasks: Array[String]
 
 @onready var points_label: Label = $GUI/Control/Tasks/Points
 @onready var health_label: Label = $GUI/Control/Health
@@ -29,7 +26,6 @@ var d: float = 0.06
 
 func _ready() -> void:
 	
-	task = starting_tasks
 	pivot.top_level = true
 
 func _physics_process(delta: float) -> void:
@@ -80,6 +76,7 @@ func cam() :
 func gui() :
 	
 	hp_string()
+	task_string()
 
 func hp_string() :
 	var t = "     "
@@ -94,3 +91,12 @@ func hp_string() :
 			"3" : t[x] = "0"
 	
 	health_label.text = t
+
+func task_string() :
+	
+	tasks_label.text = ""
+	
+	if get_tree().get_node_count_in_group("Tasks") > 0 :
+		
+		for i : Task in get_tree().get_nodes_in_group("Tasks") :
+			tasks_label.text += i.desc + "   -\n"
