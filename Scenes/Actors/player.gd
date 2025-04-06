@@ -4,6 +4,7 @@ class_name Player
 @onready var sprite: AnimatedSprite3D = $Sprite
 @onready var pivot: SpringArm3D = $Pivot
 
+static var node : Player
 static var pts = 0
 static var money = 0
 static var hp = 10
@@ -26,7 +27,9 @@ var d: float = 0.06
 
 func _ready() -> void:
 	
+	node = self
 	pivot.top_level = true
+	hp = 10
 
 func _physics_process(delta: float) -> void:
 	

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://btcl6cei2oljn"]
+
+[ext_resource type="Texture2D" uid="uid://1vkuk8wpkk4w" path="res://Assets/Visuals/Miscs/Icons/timer_100.svg" id="1_t5fex"]
+[ext_resource type="Script" uid="uid://chaoun78041n6" path="res://Scenes/Comps/task_point.gd" id="2_87d6j"]
+
+[node name="TaskPoint" type="Sprite3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+modulate = Color(0.00784314, 1, 0.239216, 0.627451)
+pixel_size = 0.015
+axis = 1
+render_priority = 2
+texture = ExtResource("1_t5fex")
+script = ExtResource("2_87d6j")
