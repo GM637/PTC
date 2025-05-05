@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuoaynvbpuq4d"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_6owss"]
+[ext_resource type="Texture2D" uid="uid://ddk8napx1da82" path="res://Assets/Visuals/Miscs/Icons/shield.png" id="2_jx4sk"]
+
+[node name="Skill" instance=ExtResource("1_6owss")]
+tooltip_text = "Parry Skill 
+
+Trigger when about to be attacked to regain some health."
+texture_progress = ExtResource("2_jx4sk")

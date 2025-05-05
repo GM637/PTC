@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3eu6yx8jeg6t"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_e8f4f"]
+[ext_resource type="Texture2D" uid="uid://dg3dfka2mdqi" path="res://Assets/Visuals/Miscs/Icons/next.png" id="2_j7dgt"]
+[ext_resource type="Script" uid="uid://cvrgl7pxoeywf" path="res://Scenes/Skills/speed_boost.gd" id="3_nmbph"]
+[ext_resource type="AudioStream" uid="uid://cgpv8mv3uoiyi" path="res://Assets/SFX/gamestart.mp3" id="4_8ygxx"]
+
+[node name="Skill" instance=ExtResource("1_e8f4f")]
+tooltip_text = "Speedboost Skill 
+
+1.5x speed for just 5 seconds. Decent cooldown."
+texture_progress = ExtResource("2_j7dgt")
+script = ExtResource("3_nmbph")
+rate = 0.1
+
+[node name="Dash" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("4_8ygxx")
+bus = &"SFX"

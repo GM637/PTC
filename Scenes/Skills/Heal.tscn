@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhfpyxswn3nt8"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_ewrv6"]
+[ext_resource type="Texture2D" uid="uid://c5ly23701d2yk" path="res://Assets/Visuals/Miscs/Icons/suit_hearts.svg" id="2_sxtw7"]
+[ext_resource type="Script" uid="uid://6c3pwlsrsokt" path="res://Scenes/Skills/heal.gd" id="3_288ae"]
+
+[node name="Skill" instance=ExtResource("1_ewrv6")]
+tooltip_text = "QuickHeal Skill 
+
+Regain 3 hearts per use, very slow cooldown."
+texture_progress = ExtResource("2_sxtw7")
+script = ExtResource("3_288ae")
+rate = 0.1

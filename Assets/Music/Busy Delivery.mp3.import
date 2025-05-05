@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn501xcyafk8f"
+path="res://.godot/imported/Busy Delivery.mp3-ac0ac23457d2e29c2cdd54c58a432034.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Busy Delivery.mp3"
+dest_files=["res://.godot/imported/Busy Delivery.mp3-ac0ac23457d2e29c2cdd54c58a432034.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ueca1wlxdxrl"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_sw1jv"]
+[ext_resource type="Texture2D" uid="uid://c3hhlxbpwc0o0" path="res://Assets/Visuals/Miscs/Icons/pawn_down.svg" id="2_lcl2g"]
+[ext_resource type="Script" uid="uid://8x4akmo7naot" path="res://Scenes/Skills/ground_pound.gd" id="3_dvgjv"]
+[ext_resource type="AudioStream" uid="uid://cwek3jm105nqu" path="res://Assets/SFX/dash.mp3" id="4_beaqr"]
+
+[node name="Skill" instance=ExtResource("1_sw1jv")]
+tooltip_text = "Ground Skill 
+
+Beautiful way of dealing damage."
+texture_progress = ExtResource("2_lcl2g")
+script = ExtResource("3_dvgjv")
+
+[node name="Dash" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("4_beaqr")
+bus = &"SFX"

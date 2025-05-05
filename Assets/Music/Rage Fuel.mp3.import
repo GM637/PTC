@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8ts35bi7cqdy"
+path="res://.godot/imported/Rage Fuel.mp3-cde09f62e3cf3ccac22902d7f79678a8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Rage Fuel.mp3"
+dest_files=["res://.godot/imported/Rage Fuel.mp3-cde09f62e3cf3ccac22902d7f79678a8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -13,10 +13,10 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(randf_range(2.0,3.0) * id).timeout
 	go()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	
+	if Player.node :
+		Player.node.overtime.connect(func():
+			$Anim.speed_scale *= 2.5)
 
 func go() :
 	

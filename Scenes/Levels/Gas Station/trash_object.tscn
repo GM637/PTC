@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx84n1j3srvb"]
+
+[ext_resource type="Script" uid="uid://bq6k40sbohob6" path="res://Scenes/Actors/trash_object.gd" id="1_easvr"]
+[ext_resource type="PackedScene" uid="uid://btcl6cei2oljn" path="res://Scenes/Comps/task_point.tscn" id="2_baont"]
+[ext_resource type="Texture2D" uid="uid://uawb7fxbdxmw" path="res://Assets/Visuals/Miscs/Icons/trash.svg" id="3_baont"]
+
+[node name="TrashObject" type="Node3D"]
+script = ExtResource("1_easvr")
+
+[node name="Delivery" parent="." node_paths=PackedStringArray("shows") instance=ExtResource("2_baont")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -0.9, 0.05, -0.85)
+visible = false
+modulate = Color(0.278646, 0.214665, 0.0631307, 0.627451)
+pixel_size = 0.01
+finish_task = true
+task_id = "T2"
+pts = 2
+shows = [NodePath("../Pickup")]
+
+[node name="Pickup" parent="." node_paths=PackedStringArray("shows") instance=ExtResource("2_baont")]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -1.7, 0.05, 0.8)
+modulate = Color(0.278646, 0.214665, 0.0631307, 0.627451)
+pixel_size = 0.005
+shows = [NodePath("../Delivery")]
+
+[node name="Sprite3D" type="Sprite3D" parent="Pickup"]
+pixel_size = 0.001
+texture = ExtResource("3_baont")

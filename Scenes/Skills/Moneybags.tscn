@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw18bb6r676c8"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_hi1bl"]
+[ext_resource type="Texture2D" uid="uid://bnfl24lrtcu14" path="res://Assets/Visuals/Miscs/Icons/pouch.png" id="2_tpg8i"]
+
+[node name="Skill" instance=ExtResource("1_hi1bl")]
+tooltip_text = "Moneybags Skill
+ 
+Gain pts when taking damage"
+texture_progress = ExtResource("2_tpg8i")

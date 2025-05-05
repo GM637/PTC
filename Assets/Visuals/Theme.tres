@@ -1,6 +1,98 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dic3owbl0ypgf"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://dic3owbl0ypgf"]
 
 [ext_resource type="FontFile" uid="uid://cg7t2p8paoye1" path="res://Assets/Visuals/Miscs/Dimbo Regular.ttf" id="1_sr4np"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_no2pl"]
+content_margin_left = 19.0
+bg_color = Color(0.121399, 0.170365, 0.210938, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86jtd"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 10
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ul2vi"]
+content_margin_left = 19.0
+bg_color = Color(0.249084, 0.441846, 0.601563, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6swd7"]
+content_margin_left = 19.0
+bg_color = Color(0.193665, 0.325588, 0.434896, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02uae"]
+content_margin_left = 19.0
+bg_color = Color(0, 0.146688, 0.268229, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sr4np"]
 
@@ -18,9 +110,85 @@ corner_detail = 10
 shadow_size = 1
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="ImageTexture" id="ImageTexture_sr4np"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o66cs"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0078125, 0.00779215, 0.00779215, 0.752)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fulp"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjew0"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.75, 0.75, 0.75, 0.75)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfa8n"]
+content_margin_left = 8.0
+content_margin_top = 0.0
+content_margin_right = 8.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8git"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 10
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
 [resource]
 default_base_scale = 2.0
 default_font = ExtResource("1_sr4np")
+Button/styles/disabled = SubResource("StyleBoxFlat_no2pl")
+Button/styles/focus = SubResource("StyleBoxFlat_86jtd")
+Button/styles/hover = SubResource("StyleBoxFlat_ul2vi")
+Button/styles/normal = SubResource("StyleBoxFlat_6swd7")
+Button/styles/pressed = SubResource("StyleBoxFlat_02uae")
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.372549)
@@ -39,3 +207,14 @@ TooltipLabel/constants/shadow_offset_x = 1
 TooltipLabel/constants/shadow_offset_y = 1
 TooltipLabel/font_sizes/font_size = 28
 TooltipPanel/styles/panel = SubResource("StyleBoxFlat_sr4np")
+VScrollBar/icons/decrement = SubResource("ImageTexture_sr4np")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_sr4np")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_sr4np")
+VScrollBar/icons/increment = SubResource("ImageTexture_sr4np")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_sr4np")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_sr4np")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_o66cs")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_7fulp")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_fjew0")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_gfa8n")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_o8git")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cue2rl6j1af07"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_ot6f8"]
+[ext_resource type="Texture2D" uid="uid://b6sbsuq2h6ckj" path="res://Assets/Visuals/Miscs/Icons/fire.png" id="2_dhedv"]
+
+[node name="Skill" instance=ExtResource("1_ot6f8")]
+tooltip_text = "Fire Damage Skill 
+
+Deals 5 ticks of damage each 1 second. Trigger when you damages enemies."
+texture_progress = ExtResource("2_dhedv")

@@ -7,6 +7,7 @@ uniform float aspect_ratio = 1.3333333;
 uniform vec2 fov = vec2(180.0, 90.0);
 uniform ivec2 tiling = ivec2(1, 1);
 uniform vec2 offset = vec2(0.0, 0.0);
+uniform vec4 tint : source_color;
 
 varying vec4 BG_COORDS;
 
@@ -30,5 +31,5 @@ void fragment() {
 	vec2 uv_offset = vec2(-offset.x, offset.y);
 	vec2 uv = (SCREEN_UV + uv_offset) * BG_COORDS.zw + BG_COORDS.xy;
 	uv *= vec2(tiling);
-	ALBEDO = texture(sky_texture, uv).rgb;
+	ALBEDO = texture(sky_texture, uv).rgb * tint.rgb;
 }

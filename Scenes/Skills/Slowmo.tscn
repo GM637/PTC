@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjk16sj5hk5gi"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_dxnk5"]
+[ext_resource type="Texture2D" uid="uid://cx76dbb3d0eh4" path="res://Assets/Visuals/Miscs/Icons/hourglass_bottom.png" id="2_eubq7"]
+
+[node name="Skill" instance=ExtResource("1_dxnk5")]
+tooltip_text = "Slowmo Skill 
+
+Slowmo effect when you gets hit."
+texture_progress = ExtResource("2_eubq7")

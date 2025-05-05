@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdae3ricjhsu0"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_uln0n"]
+[ext_resource type="Texture2D" uid="uid://bvqamy45p7mie" path="res://Assets/Visuals/Miscs/Icons/suit_hearts_broken.png" id="2_rqkyc"]
+
+[node name="Skill" instance=ExtResource("1_uln0n")]
+tooltip_text = "Regen Skill 
+
+Gains 1 heart every 3 seconds."
+texture_progress = ExtResource("2_rqkyc")

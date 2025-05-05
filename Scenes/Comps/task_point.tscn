@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://btcl6cei2oljn"]
+[gd_scene load_steps=9 format=3 uid="uid://btcl6cei2oljn"]
 
 [ext_resource type="Texture2D" uid="uid://1vkuk8wpkk4w" path="res://Assets/Visuals/Miscs/Icons/timer_100.svg" id="1_t5fex"]
 [ext_resource type="Script" uid="uid://chaoun78041n6" path="res://Scenes/Comps/task_point.gd" id="2_87d6j"]
+[ext_resource type="AudioStream" uid="uid://cj5pkx68dtakb" path="res://Assets/SFX/points.mp3" id="3_fxxuv"]
+[ext_resource type="AudioStream" uid="uid://chnc6u3qtpxt0" path="res://Assets/SFX/task_finish.mp3" id="4_lv0f6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5fex"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_87d6j"]
+material = SubResource("StandardMaterial3D_t5fex")
+
+[sub_resource type="Curve" id="Curve_fxxuv"]
+_data = [Vector2(0, 0.237354), 0.0, 0.0, 0, 0, Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.152344, 0.984436), 0.0, 0.0, 0, 0, Vector2(1, 0.0972763), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ywonc"]
+random_pitch = 1.5
+streams_count = 1
+stream_0/stream = ExtResource("3_fxxuv")
 
 [node name="TaskPoint" type="Sprite3D"]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
@@ -11,3 +29,30 @@ axis = 1
 render_priority = 2
 texture = ExtResource("1_t5fex")
 script = ExtResource("2_87d6j")
+
+[node name="VFX" type="CPUParticles3D" parent="."]
+lifetime = 0.5
+mesh = SubResource("SphereMesh_87d6j")
+emission_shape = 1
+emission_sphere_radius = 0.5
+gravity = Vector3(0, 9.8, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_fxxuv")
+color = Color(2, 2, 2, 0.741)
+
+[node name="Collect" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ywonc")
+pitch_scale = 1.5
+bus = &"SFX"
+
+[node name="Finish" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lv0f6")
+volume_db = 15.0
+bus = &"SFX"
+
+[node name="Finish2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fxxuv")
+volume_db = 10.0
+pitch_scale = 2.5
+bus = &"SFX"

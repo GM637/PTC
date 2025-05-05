@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgwbuleimp51w"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_xepin"]
+[ext_resource type="Texture2D" uid="uid://d30d685sura1v" path="res://Assets/Visuals/Miscs/Icons/sword.png" id="2_boklh"]
+
+[node name="Skill" instance=ExtResource("1_xepin")]
+tooltip_text = "Buffs Skill 
+
+Any attacks you have deals 2 Damage instead of one."
+texture_progress = ExtResource("2_boklh")

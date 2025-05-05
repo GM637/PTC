@@ -10,8 +10,17 @@ class_name TaskPoint
 
 signal got
 
+var t = 0.0
+var s = 0.0
+
+func _ready() -> void:
+	t += randf_range(0,9999)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	t += delta
+	
+	scale = Vector3.ONE * (1.0 + (sin(t * 15.0) * 0.2))
 	
 	if visible :
 		if Player.node :
@@ -24,6 +33,10 @@ func _process(delta: float) -> void:
 					for i:Task in get_tree().get_nodes_in_group("Tasks") :
 						if i.id == task_id :
 							i.req -= 1
+					$Finish.play()
+					$Finish2.play()
+				else :
+					$Collect.play()
 				Player.pts += pts
 				got.emit()
 				

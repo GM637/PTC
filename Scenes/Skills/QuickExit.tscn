@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvyqc3th0robh"]
+
+[ext_resource type="PackedScene" uid="uid://ox2hm7obxpf5" path="res://Scenes/Comps/skill.tscn" id="1_1kv5v"]
+[ext_resource type="Texture2D" uid="uid://crsw4tsphenbj" path="res://Assets/Visuals/Miscs/Icons/exit.png" id="2_wk7ut"]
+
+[node name="Skill" instance=ExtResource("1_1kv5v")]
+tooltip_text = "Quickexit Skill 
+
+Allowing to return early/unfinished without losing half the earnings."
+texture_progress = ExtResource("2_wk7ut")
